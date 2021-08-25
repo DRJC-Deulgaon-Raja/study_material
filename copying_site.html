@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DRJC study material</title>
+    <!-- <link rel="stylesheet" href="study_material.css"> -->
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+}
+.home1{
+    display: flex;
+    width: 100%;
+    background-color: black;
+    opacity: 0.8;
+    margin: 0;
+    align-items: center;
+    justify-content:left;
+    padding: 0;
+}
+.logo{
+    list-style: none;
+    display: flexbox;
+    width: 4.5%;
+    margin: 0.5%;
+}
+.navebar{
+    list-style: none;
+    display: flex;
+    margin-left: 1%;
+}
+.navebar a{
+    text-decoration: none;
+    color:black;
+}
+.navebar li:hover{
+    display: block;
+    color: black;
+    background-color: white;
+    text-decoration: none;
+}
+.item{
+    padding: 8px;
+    display: flexbox;
+    background-color: gray;
+    color: white;
+    border: 2px white;
+    border-radius: 20%;
+    margin:2px;    
+    text-decoration: none;
+}
+.logo img{
+    margin-left: 0;
+    width:100%;
+    height:100%;
+}
+.home2{
+    display: flex;
+}
+.btn-group button {
+        background-color: #4CAF50;
+        /* Green background */
+        border: 1px solid green;
+        /* Green border */
+        color: white;
+        /* White text */
+        padding: 10px 24px;
+        /* Some padding */
+        cursor: pointer;
+        /* Pointer/hand icon */
+        background-position-x: center;
+        enable-background: 2rem;
+        margin-block-end: 6px;
+        /* Float the buttons side by side */
+    }
+
+    /* Clear floats (clearfix hack) */
+    .btn-group:after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+    .btn-group button:not(:last-child) {
+        border-right: none;
+        /* Prevent double borders */
+    }
+
+    /* Add a background color on hover */
+    .btn-group button:hover {
+        background-color: #3e8e41;
+    }
+
+    </style>
+</head>
+
+<body class="backgr">
+    <div class="home1">
+        <ul class="logo">
+            <li><img src="../../imgges/logo.jpg" alt="DRJC logo"></li>
+        </ul>
+        <ul class="navebar">
+            <li class="item"><a href="/home">Home</a></li>
+            <li class="item"><a href="/study_material">Study Material</a></li>
+            <li class="item"><a href="/department">Department</a></li>
+            <li class="item"><a href="#">Achivers</a></li>
+            <li class="item"><a href="/contact">Contact</a></li>
+        </ul>
+    </div>
+    <div class="home2">
+        <div class="btn-group">
+            <form action="mathmatics.html">
+                <button type="submit">Mathmatics</button>
+            </form>
+            <form action="physic.html">
+                <button type="submit">Physic</button>
+            </form>
+            <form action="chemistry.html">
+                <button type="submit">CHEMISTRY</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
