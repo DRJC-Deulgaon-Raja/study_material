@@ -3,98 +3,301 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DRJC, Deulgaon Raja</title>
-    <!-- <link rel="stylesheet" href="home.css"> -->
+    <title>DRJC</title>
     <style>
-        *{
-    margin: 0;
-    padding: 0;
-}
-.backgr{
-    z-index: 4;
-}
-.backgr{
-    content:"";
-    position: absolute;
-    background: url(../../imgges/groupanimals.jpg) no-repeat center center/cover;
-    height:100vw;
-    width:100%;
-    z-index:-2;
-    opacity: 1;
-}
-.home1{
-    display: flex;
-    width: 100%;
-    background-color: black;
-    opacity: 0.8;
-    margin: 0;
-    align-items: center;
-    justify-content:left;
-    padding: 0;
-}
-.logo{
-    list-style: none;
-    display: flexbox;
-    width: 4.5%;
-    margin: 0.5%;
-}
-.navebar{
-    list-style: none;
-    display: flex;
-    margin-left: 1%;
-}
-.navebar li:hover{
-    display: block;
-    color: black;
-    background-color: white;
-    text-decoration: none;
-}
-.item{
-    padding: 8px;
-    display: flexbox;
-    background-color: gray;
-    color: white;
-    border: 2px white;
-    border-radius: 20%;
-    margin:2px;    
-}
-.logo img{
-    margin-left: 0;
-    width:100%;
-    height:100%;
-}
-.home2{
-    text-align: center;
-    color:black;
-    padding-top: 30%;
-    padding-left: 10%;
-    padding-right: 15%;
-    font-size: 1.4vmax;
-}
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,700&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        /* Slideshow container */
+        .slideshow-container {
+            max-width: 100vw;
+            display: block;
+
+        }
+
+        /* Hide the images by default */
+        .mySlides {
+            display: block;
+        }
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: rgb(196, 70, 185);
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+            font-weight: bold;
+            font-size: 3vw;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+            margin-right: 3vw;
+        }
+
+        .prev {
+            margin-left: 3vw;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        /* .prev:hover,
+        .next:hover {
+            background-color: rgba(255, 255, 255, 0.8);
+        } */
+
+        /* Caption text */
+        .text {
+            color: rgba(0, 90, 140, 0.88);
+            font-size: 25px;
+            font-weight: bold;
+            padding: 8px 12px;
+            margin-top: -120px;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .subtext {
+            margin-top: 0;
+            text-align: center;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 8px;
+            /* identical to box height */
+            color: rgba(75, 44, 250, 0.62);
+            backdrop-filter: blur(4px);
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+            cursor: pointer;
+            height: 8px;
+            width: 8px;
+            margin-top: 40px;
+            background-color: white;
+            border-radius: 50%;
+            display: inline-block;
+            align-self: baseline;
+
+        }
+
+        .active,
+        .dot:hover {
+            background-color: blue;
+        }
+
+        /* Fading animation */
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @-webkit-keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+
+
+        .largecontainer {
+            display: flex;
+            flex-direction: column;
+            align-content: flex-start;
+        }
+
+        .navbar {
+            display: flex;
+            min-height: 65px;
+            background-color: rgba(0, 90, 140, 0.88);
+            align-items: center;
+            justify-content: space-between;
+            width: 100vw;
+        }
+
+        .logo {
+            color: white;
+            margin: 0 1vw 0 1vw;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5em;
+        }
+
+        .navbar11 {
+            justify-content: space-evenly;
+            flex-wrap: column;
+            margin-right: 1vw;
+        }
+
+        .item {
+            color: white;
+            background-color: red;
+            padding: 0.4vw;
+            border-radius: 0.3vw;
+            text-decoration: none;
+        }
+
+        .about {
+            width: 70vw;
+            align-self: center;
+            text-align: center;
+            margin-top: 2vw;
+        }
+
+        #about1 {
+            font-size: 2vw;
+            margin-bottom: 1.5vw;
+        }
     </style>
 </head>
 
-<body class="backgr">
-    <div class="home1">
-        <ul class="logo">
-            <li><img src="https:///res-console.cloudinary.com/jayu/thumbnails/transform/v1/image/upload/v1629967510/https:///res-console.cloudinary.com/jayu/thumbnails/transform/v1/image/upload/Y19jcm9wLGhfMjAwMCxxXzEwMCx3XzIwMDAseF8wLHlfMA==/v1629967510/ZHJqY2xvZ29fZmg1YjEx/template_primary" alt="DRJC logo"></li>
-        </ul>
-        <ul class="navebar">
-            <li class="item"><a href="index.html">Home</a></li>
-            <li class="item"><a href="study_material.html">Study Material</a></li>
-            <li class="item"><a href="department.html">Department</a></li>
-            <li class="item"><a href="#">Achivers</a></li>
-            <li class="item"><a href="contact.html">Contact</a></li>
-        </ul>
+<body>
+    <div class="largecontainer">
+        <div class="navbar">
+            <p class="logo">DRJC</p>
+            <div class="navbar11">
+                <a class="item" href="index.html">Home</a>
+                <a class="item" href="study_material.html">Study Material</a>
+                <a class="item" href="#about1">About</a>
+                <a class="item" href="#contact11">Contact</a>
+            </div>
+        </div>
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+                <img src="https://res.cloudinary.com/jayu/image/upload/v1629808261/hehaxlhd7jl9bhjzgcbi.jpg"
+                    style="width:100vw; height:600px;">
+                <div class="text" style="text-align:center">Caption Text</div>
+                <div class="subtext">lorem ksdlfkfk ekjewjfods defiodow ewoids</div>
+
+            </div>
+
+            <div class="mySlides fade">
+                <img src="https://res.cloudinary.com/jayu/image/upload/v1629808090/k2tktyfpkjrxvlskoupc.jpg"
+                    style="width:100vw; height:600px;">
+                <div class="text" style="text-align:center">Caption Two</div>
+                <div class="subtext">lorem ksdlfkfk ekjewjfods defiodow ewoids</div>
+            </div>
+
+            <div class="mySlides fade">
+
+                <img src="https://res.cloudinary.com/jayu/image/upload/v1621930111/i0umb6u0ynibo6qn0qc1.jpg"
+                    style="width:100vw; height:600px;">
+                <div class="text" style="text-align:center">Caption Three</div>
+                <div class="subtext">lorem ksdlfkfk ekjewjfods defiodow ewoids</div>
+            </div>
+
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <!-- The dots/circles -->
+
+        </div>
+        <div class="about">
+            <p id="about1">About us</p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Quaerat magnam libero ab facilis corrupti ratione debitis accusamus hic a dolorum
+                vitae dolores iste doloribus officiis cupiditate non atque exercitationem quo numquam, mollitia
+                doloremque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil dicta optio blanditiis
+                repellendus sint, tenetur dolor recusandae esse aut expedita nemo molestiae, molestias
+                sapiente neque nostrum. Cumque pariatur voluptatum blanditiis reiciendis illum minima! Perferendis rei
+                ciendis maxime eaque qui illo dolor aut incidunt repellendus sunt.
+
+            </p>
+        </div>
+        <div class="contact" style="text-align:center; margin-top:2vw;">
+            <p id="contact11" style="font-size:1.5vw; align-self:center;">Contact</p>
+            <div style="display:flex; justify-content:space-evenly;">
+                <div>
+                    <img src="https://res.cloudinary.com/jayu/image/upload/c_scale,h_100,w_96/v1630154827/location-icon_ixy8xs_s3zs1k.webp"
+                        alt="address" style="size:20px">
+                    <p>
+                        <b>Jr. College, DRHS</b><br>
+                        Jalna rode, Deulgaon Raja <br>
+                        pin-443204
+                    </p>
+                </div>
+                <div>
+                    <img src="https://res.cloudinary.com/jayu/image/upload/v1630157282/call_11_g52huu.jpg" alt="call">
+                    <p>call : 9999999999 / 9999999999</p>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="home2">
-        <h2>About us</h2>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo natus placeat quos, aliquam excepturi molestiae
-            iure, soluta minus laudantium accusantium repudiandae. Quia saepe earum laudantium iure temporibus obcaecati
-            autem modi quos doloribus ut eaque beatae, aliquam praesentium quasi quo consequuntur velit cupiditate eos
-            rferendis dolorum. Aut provident praesentium dolor dolores id voluptatum obcaecati debitis?</p>
-    </div>
+    <br>
 </body>
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+    }
+</script>
 
 </html>
